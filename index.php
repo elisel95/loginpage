@@ -1,3 +1,11 @@
+<?php
+  session_start();
+ 
+  if(!isset($_SESSION["pseudo"])){
+    header("Location: view/login.php");
+    exit(); 
+  }
+?>
 <!DOCTYPE html>
 <html lang="fr">
   <head>
@@ -23,27 +31,10 @@
   </head>
   <body>
 	<div id="container" style="margin: 5% 34% 0 34%;">
-		<div class="">
-			<form class="px-4 py-3" method='POST' action='controller/login.php'>
-				<div class="form-group">
-				<label for="pseudo">Pseudo</label>
-				<input type="text" class="form-control" id="pseudo" name="pseudo" placeholder="Pseudo" required>
-				</div>
-				<div class="form-group">
-				<label for="password">Password</label>
-				<input type="password" class="form-control" id="password" name="password" placeholder="Password" required>
-				</div>
-				<div class="form-check">
-				<input type="checkbox" class="form-check-input" id="dropdownCheck">
-				<label class="form-check-label" for="dropdownCheck">
-					Remember me
-				</label>
-				</div>
-				<button type="submit" name="login" class="btn btn-primary">Sign in</button>
-			</form>
-			<div class="dropdown-divider"></div>
-			<a class="dropdown-item" href="view/register.php">New around here? Sign up</a>
-			<a class="dropdown-item" href="#">Forgot password?</a>
+		<div class="sucess">
+			<h1>Bienvenue <?php echo $_SESSION['pseudo']; ?>!</h1>
+			<p>C'est votre tableau de bord.</p>
+			<a href="controller/logout.php">Déconnexion</a>
 		</div>
 	</div>
   </body>

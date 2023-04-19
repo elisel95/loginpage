@@ -24,11 +24,7 @@
   <body>
 	<div id="container" style="margin: 5% 34% 0 34%;">
 		<div class="">
-			<form class="px-4 py-3" method='POST' action='../controller/register.php'>
-            <div class="form-group">
-				<label for="email">Email address</label>
-				<input type="email" class="form-control" id="email" name="email" placeholder="email@example.com" required>
-				</div>
+			<form class="px-4 py-3" method='POST' action='../controller/login.php'>
 				<div class="form-group">
 				<label for="pseudo">Pseudo</label>
 				<input type="text" class="form-control" id="pseudo" name="pseudo" placeholder="Pseudo" required>
@@ -37,15 +33,16 @@
 				<label for="password">Password</label>
 				<input type="password" class="form-control" id="password" name="password" placeholder="Password" required>
 				</div>
-				<div class="form-group">
-				<label for="passwordVerif">Password</label>
-				<input type="password" class="form-control" id="passwordVerif" name="passwordVerif" placeholder="Password" required>
+				<div class="form-check">
+				<input type="checkbox" class="form-check-input" id="dropdownCheck">
+				<label class="form-check-label" for="dropdownCheck">
+					Remember me
+				</label>
 				</div>
-                <br>
-				<button type="submit" name="register" class="btn btn-primary">Sign in</button>
+				<button type="submit" name="login" class="btn btn-primary">Sign in</button>
 			</form>
 			<div class="dropdown-divider"></div>
-			<a class="dropdown-item" href="login.php">Already have an account ?</a>
+			<a class="dropdown-item" href="register.php">New around here? Sign up</a>
 			<a class="dropdown-item" href="#">Forgot password?</a>
 		</div>
 	</div>
