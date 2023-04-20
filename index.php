@@ -1,10 +1,20 @@
 <?php
-  session_start();
- 
+session_start();
+
   if(!isset($_SESSION["pseudo"])){
-    header("Location: view/login.php");
-    exit(); 
-  }
+   
+
+	if (isset($_COOKIE['pseudo'])) {
+		$pseudo = $_COOKIE['pseudo'];
+	}else{
+		header("Location: view/login.php");   		 
+	}
+
+	  
+  }else{
+	$pseudo = $_SESSION['pseudo'];
+  };
+  
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -32,7 +42,7 @@
   <body>
 	<div id="container" style="margin: 5% 34% 0 34%;">
 		<div class="sucess">
-			<h1>Bienvenue <?php echo $_SESSION['pseudo']; ?>!</h1>
+			<h1>Bienvenue <?php echo $pseudo; ?>!</h1>
 			<p>C'est votre tableau de bord.</p>
 			<a href="controller/logout.php">Déconnexion</a>
 		</div>

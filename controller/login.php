@@ -26,11 +26,19 @@ if(isset($_POST['login'])){
                 session_start();
                 $_SESSION['id'] = $connect['id'];
                 $_SESSION['pseudo'] = $pseudo;
-                //echo 'You are connecteds !';
-                
-                header("Location: ../index.php?pseudo=".$_SESSION['pseudo']);
+                //echo 'You are connected !';
 
+                
+                if($_POST['remember'] == 'remember'){
+                    $cookieDuration = 60 * 60 * 24; // 24h
+                    $cookieEndOfTime = time() + $cookieDuration;
+                    setcookie('pseudo', $pseudo, $cookieEndOfTime,'/','localhost');
+                };
+
+                header("Location: ../index.php?pseudo=".$_SESSION['pseudo']);
                 $connexion = null;
+
+
             } else {
                 echo 'Wrong password!';
             }

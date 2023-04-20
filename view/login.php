@@ -34,7 +34,7 @@
 				<input type="password" class="form-control" id="password" name="password" placeholder="Password" required>
 				</div>
 				<div class="form-check">
-				<input type="checkbox" class="form-check-input" id="dropdownCheck">
+				<input type="checkbox" name="remember" value="remember" class="form-check-input" id="dropdownCheck">
 				<label class="form-check-label" for="dropdownCheck">
 					Remember me
 				</label>
