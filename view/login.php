@@ -43,7 +43,7 @@
 			</form>
 			<div class="dropdown-divider"></div>
 			<a class="dropdown-item" href="register.php">New around here? Sign up</a>
-			<a class="dropdown-item" href="#">Forgot password?</a>
+			<a class="dropdown-item" href="forgot_password.php">Forgot password?</a>
 		</div>
 	</div>
   </body>

@@ -25,28 +25,32 @@
 	<div id="container" style="margin: 5% 34% 0 34%;">
 		<div class="">
 			<form class="px-4 py-3" method='POST' action='../controller/register.php'>
-            <div class="form-group">
-				<label for="email">Email address</label>
-				<input type="email" class="form-control" id="email" name="email" placeholder="email@example.com" required>
-				</div>
-				<div class="form-group">
-				<label for="pseudo">Pseudo</label>
-				<input type="text" class="form-control" id="pseudo" name="pseudo" placeholder="Pseudo" required>
-				</div>
-				<div class="form-group">
-				<label for="password">Password</label>
-				<input type="password" class="form-control" id="password" name="password" placeholder="Password" required>
-				</div>
-				<div class="form-group">
-				<label for="passwordVerif">Password</label>
-				<input type="password" class="form-control" id="passwordVerif" name="passwordVerif" placeholder="Password" required>
+         		<div class="form-group">
+					<label for="email">Email address</label>
+					<input type="email" class="form-control" id="email" name="email" placeholder="email@example.com" required>
+					</div>
+					<div class="form-group">
+					<label for="pseudo">Pseudo</label>
+					<input type="text" class="form-control" id="pseudo" name="pseudo" placeholder="Pseudo" required>
+					</div>
+					<div class="form-group">
+					<label for="password">Password</label>
+					<input type="password" class="form-control" id="password" name="password" placeholder="Password" required>
+					</div>
+					<div class="form-group">
+					<label for="passwordVerif">Password</label>
+					<input type="password" class="form-control" id="passwordVerif" name="passwordVerif" placeholder="Password" required>
+					</div>
+					<div class="form-group">
+					<label for="question">Name of your mother ?</label>
+					<input type="text" class="form-control" id="question" name="question" placeholder="Name" required>
 				</div>
                 <br>
 				<button type="submit" name="register" class="btn btn-primary">Sign in</button>
 			</form>
 			<div class="dropdown-divider"></div>
 			<a class="dropdown-item" href="login.php">Already have an account ?</a>
-			<a class="dropdown-item" href="#">Forgot password?</a>
+			<a class="dropdown-item" href="forgot_password.php">Forgot password?</a>
 		</div>
 	</div>
   </body>
